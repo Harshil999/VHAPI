@@ -109,8 +109,6 @@ namespace VHEmpAPI.Controllers
         [HttpPost("Save_Get_Token")]
         public async Task<DashBoardList> Save_Get_Token([FromBody] MobileCreds mobileCreds)
         {
-            //TokenData tokenData = new TokenData();
-
             var Token = jwtAuth.Authentication();
             if (Token == null)
             {
